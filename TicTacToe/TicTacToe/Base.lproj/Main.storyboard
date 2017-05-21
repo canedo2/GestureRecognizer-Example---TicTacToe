@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tablero.png" translatesAutoresizingMaskIntoConstraints="NO" id="zBZ-f5-xaC">
+                                <rect key="frame" x="128" y="299" width="768" height="768"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zBZ-f5-xaC" secondAttribute="height" multiplier="1:1" id="nyq-Lv-6BU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qLN-bh-e2D" userLabel="circulo1">
+                                <rect key="frame" x="128" y="125.5" width="153.5" height="153.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="m6h-LT-785" appends="YES" id="QSi-Ln-qIS"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="O8q-8l-s3K" userLabel="circulo2">
+                                <rect key="frame" x="435" y="125.5" width="154" height="153.5"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="x4g-r1-lcZ" appends="YES" id="Q9E-w5-Cxk"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="GPZ-sZ-36m" userLabel="circulo3">
+                                <rect key="frame" x="742.5" y="125.5" width="153.5" height="153.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xgR-K5-nLf" appends="YES" id="Dzo-Bq-rUp"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cruz.png" translatesAutoresizingMaskIntoConstraints="NO" id="SBt-K2-73x" userLabel="cruz1">
+                                <rect key="frame" x="435" y="1087" width="154" height="153.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5og-8P-Lem" appends="YES" id="Klj-Ll-mO6"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cruz.png" translatesAutoresizingMaskIntoConstraints="NO" id="NTK-9h-DUQ" userLabel="cruz2">
+                                <rect key="frame" x="742.5" y="1087" width="153.5" height="153.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jbu-Ut-187" appends="YES" id="WC6-yC-Pwq"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cruz.png" translatesAutoresizingMaskIntoConstraints="NO" id="cP9-i1-frD" userLabel="cruz3">
+                                <rect key="frame" x="128" y="1087" width="153.5" height="153.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jem-Zi-pKu" appends="YES" id="S8U-rI-UMM"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRQ-i2-LNQ">
+                                <rect key="frame" x="972" y="50" width="22" height="22"/>
+                                <connections>
+                                    <action selector="showInfo" destination="BYZ-38-t0r" eventType="touchUpInside" id="qYT-25-ohV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibu-YD-WMv">
+                                <rect key="frame" x="20" y="50" width="39" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="RYZ-Sc-0rf"/>
+                                </constraints>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="reiniciarJuego" destination="BYZ-38-t0r" eventType="touchUpInside" id="gSr-Am-5Fu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="NTK-9h-DUQ" firstAttribute="trailing" secondItem="zBZ-f5-xaC" secondAttribute="trailing" id="0cN-1g-Xyv"/>
+                            <constraint firstItem="zBZ-f5-xaC" firstAttribute="leading" secondItem="qLN-bh-e2D" secondAttribute="leading" id="2HU-rL-7R0"/>
+                            <constraint firstItem="cP9-i1-frD" firstAttribute="height" secondItem="qLN-bh-e2D" secondAttribute="height" id="8Lf-lt-q4k"/>
+                            <constraint firstItem="GPZ-sZ-36m" firstAttribute="trailing" secondItem="zBZ-f5-xaC" secondAttribute="trailing" id="BOr-Gx-DnL"/>
+                            <constraint firstItem="zBZ-f5-xaC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E32-y8-fjj"/>
+                            <constraint firstItem="O8q-8l-s3K" firstAttribute="height" secondItem="qLN-bh-e2D" secondAttribute="height" id="E57-H1-Xj5"/>
+                            <constraint firstItem="cP9-i1-frD" firstAttribute="top" secondItem="zBZ-f5-xaC" secondAttribute="bottom" constant="20" id="I8l-WT-ij0"/>
+                            <constraint firstItem="GPZ-sZ-36m" firstAttribute="centerY" secondItem="qLN-bh-e2D" secondAttribute="centerY" id="IWa-8Z-zaU"/>
+                            <constraint firstItem="SBt-K2-73x" firstAttribute="height" secondItem="qLN-bh-e2D" secondAttribute="height" id="Koc-JD-cMv"/>
+                            <constraint firstItem="Ibu-YD-WMv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lfe-7d-9ps"/>
+                            <constraint firstItem="SBt-K2-73x" firstAttribute="centerY" secondItem="cP9-i1-frD" secondAttribute="centerY" id="Nqi-It-xzk"/>
+                            <constraint firstItem="cP9-i1-frD" firstAttribute="leading" secondItem="qLN-bh-e2D" secondAttribute="leading" id="Pbb-aI-1hf"/>
+                            <constraint firstItem="O8q-8l-s3K" firstAttribute="centerX" secondItem="zBZ-f5-xaC" secondAttribute="centerX" id="QDn-dI-wcd"/>
+                            <constraint firstItem="SBt-K2-73x" firstAttribute="centerX" secondItem="zBZ-f5-xaC" secondAttribute="centerX" id="Qlx-FH-Bcd"/>
+                            <constraint firstItem="mRQ-i2-LNQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Sg7-nm-Fnp"/>
+                            <constraint firstItem="zBZ-f5-xaC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="SiN-eR-IGd"/>
+                            <constraint firstItem="zBZ-f5-xaC" firstAttribute="top" secondItem="qLN-bh-e2D" secondAttribute="bottom" constant="20" id="SyV-uu-3IU"/>
+                            <constraint firstItem="NTK-9h-DUQ" firstAttribute="height" secondItem="qLN-bh-e2D" secondAttribute="height" id="T3t-JD-4AT"/>
+                            <constraint firstItem="GPZ-sZ-36m" firstAttribute="width" secondItem="qLN-bh-e2D" secondAttribute="width" id="URh-aJ-2XV"/>
+                            <constraint firstItem="O8q-8l-s3K" firstAttribute="centerY" secondItem="qLN-bh-e2D" secondAttribute="centerY" id="V7B-Mu-kLS"/>
+                            <constraint firstItem="NTK-9h-DUQ" firstAttribute="width" secondItem="qLN-bh-e2D" secondAttribute="width" id="Zxi-Yw-Ft4"/>
+                            <constraint firstItem="qLN-bh-e2D" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="bAD-kH-igv"/>
+                            <constraint firstItem="NTK-9h-DUQ" firstAttribute="centerY" secondItem="cP9-i1-frD" secondAttribute="centerY" id="bfg-I0-137"/>
+                            <constraint firstAttribute="trailing" secondItem="mRQ-i2-LNQ" secondAttribute="trailing" constant="30" id="eRz-cJ-reP"/>
+                            <constraint firstItem="O8q-8l-s3K" firstAttribute="width" secondItem="qLN-bh-e2D" secondAttribute="width" id="gpd-3s-Uij"/>
+                            <constraint firstItem="Ibu-YD-WMv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="hBy-Od-6f5"/>
+                            <constraint firstItem="SBt-K2-73x" firstAttribute="width" secondItem="qLN-bh-e2D" secondAttribute="width" id="oBr-Vx-cJ7"/>
+                            <constraint firstItem="zBZ-f5-xaC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oyy-5H-USR"/>
+                            <constraint firstItem="cP9-i1-frD" firstAttribute="width" secondItem="qLN-bh-e2D" secondAttribute="width" id="tYd-CQ-egb"/>
+                            <constraint firstItem="GPZ-sZ-36m" firstAttribute="height" secondItem="qLN-bh-e2D" secondAttribute="height" id="y9M-iF-qVY"/>
+                            <constraint firstItem="qLN-bh-e2D" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="yl3-PY-efx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circulo1" destination="qLN-bh-e2D" id="Yai-Q8-psa"/>
+                        <outlet property="circulo2" destination="O8q-8l-s3K" id="VFM-1K-jfh"/>
+                        <outlet property="circulo3" destination="GPZ-sZ-36m" id="ei6-LV-2cl"/>
+                        <outlet property="cruz1" destination="cP9-i1-frD" id="GxU-yt-gdy"/>
+                        <outlet property="cruz2" destination="SBt-K2-73x" id="KBc-N6-3Fv"/>
+                        <outlet property="cruz3" destination="NTK-9h-DUQ" id="593-PV-2Ye"/>
+                        <outlet property="tablero" destination="zBZ-f5-xaC" id="IRR-Kp-9Tx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="m6h-LT-785">
+                    <connections>
+                        <action selector="panHandler:" destination="BYZ-38-t0r" id="v8l-bd-PS4"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="x4g-r1-lcZ">
+                    <connections>
+                        <action selector="panHandler:" destination="BYZ-38-t0r" id="JkH-nF-lSH"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="xgR-K5-nLf">
+                    <connections>
+                        <action selector="panHandler:" destination="BYZ-38-t0r" id="37w-Xf-x7g"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="5og-8P-Lem">
+                    <connections>
+                        <action selector="panHandler:" destination="BYZ-38-t0r" id="2b2-Zd-uMI"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="jbu-Ut-187">
+                    <connections>
+                        <action selector="panHandler:" destination="BYZ-38-t0r" id="h1v-03-wni"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="jem-Zi-pKu">
+                    <connections>
+                        <action selector="panHandler:" destination="BYZ-38-t0r" id="MSw-lY-MYt"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="24.375" y="34.859154929577464"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circulo.png" width="872" height="917"/>
+        <image name="cruz.png" width="1500" height="1500"/>
+        <image name="tablero.png" width="709" height="709"/>
+    </resources>
+</document>
